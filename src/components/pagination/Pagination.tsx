@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './pagination.css'
+import './pagination.css';
 
 type Position = 'start' | 'center' | 'end';
 
@@ -58,12 +58,13 @@ const Pagination: React.FC<PaginationProps> = ({
       onPageChange(totalPages);
     }
   };
-    const startPage = Math.max(1, currentPage - 3);
-    const endPage = Math.min(totalPages, currentPage + 3);
 
-    for (let i: number = startPage; i < endPage; i++) {
-      pages.push(i);
-    }
+  const startPage = Math.max(1, currentPage - 3);
+  const endPage = Math.min(totalPages, currentPage + 3);
+
+  for (let i: number = startPage; i <= endPage; i++) {
+    pages.push(i);
+  }
 
   return (
     <nav className='pagination-container'>
@@ -122,7 +123,11 @@ const Pagination: React.FC<PaginationProps> = ({
           </button>
         </li>
         {doubleArrows && (
-          <li>
+          <li
+            className={`page-item ${
+              currentPage === totalPages ? 'disabled' : ''
+            }`}
+          >
             <button
               type='button'
               className='page-link'

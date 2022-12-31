@@ -1,6 +1,6 @@
-.paginationWrap{
-max-width: 80%;
-margin: 10px auto;
+.paginationWrap {
+  max-width: 80%;
+  margin: 10px auto;
 }
 
 .pagination-container {
@@ -41,6 +41,8 @@ ul.pagination {
   padding: 0.5rem 0.5rem;
   line-height: 1.25;
   background-color: #ffffff;
+  font-size: 0.9rem;
+  font-family: inherit;
   color: #3f434a;
   min-height: 34px;
   min-width: 34px;
@@ -53,8 +55,8 @@ ul.pagination {
   border-color: transparent;
 }
 .page-item.active .page-link {
-  background-color: #227EFF;
-  border-color: #227EFF;
+  background-color: #227eff;
+  border-color: #227eff;
   color: #ffffff;
 }
 .page-item:first-of-type .page-link {
@@ -70,10 +72,10 @@ ul.pagination {
 .page-item:last-of-type .page-link,
 .page-item:nth-last-of-type(2) .page-link {
   font-size: 22px;
-  color: #227EFF;
+  color: #227eff;
   line-height: 18px;
-  background-color: #D1E4FF;
-  border: 1px solid #D1E4FF;
+  background-color: #e9f2ff;
+  border: 1px solid #e9f2ff;
 }
 .page-item.disabled .page-link {
   color: #8a9099;

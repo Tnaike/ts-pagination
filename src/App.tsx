@@ -20,12 +20,14 @@ function App() {
       >
         Learn React
       </a>
-      <Pagination
-        currentPage={currentPage}
-        totalPages={20}
-        onPageChange={handlePageChange}
-        align='start'
-      />
+      <div className='paginationWrap'>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={20}
+          onPageChange={handlePageChange}
+          align='start'
+        />
+      </div>
     </div>
   );
 }
