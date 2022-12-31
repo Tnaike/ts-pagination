@@ -1,3 +1,8 @@
+.paginationWrap{
+max-width: 80%;
+margin: 10px auto;
+}
+
 .pagination-container {
   display: flex;
   align-items: center;
@@ -41,13 +46,15 @@ ul.pagination {
   min-width: 34px;
   text-align: center;
   border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
 }
 .page-link:hover {
   border-color: transparent;
 }
 .page-item.active .page-link {
-  background-color: #ff7f36;
-  border-color: #ff7f36;
+  background-color: #227EFF;
+  border-color: #227EFF;
   color: #ffffff;
 }
 .page-item:first-of-type .page-link {
@@ -63,10 +70,10 @@ ul.pagination {
 .page-item:last-of-type .page-link,
 .page-item:nth-last-of-type(2) .page-link {
   font-size: 22px;
-  color: #ff7f36;
+  color: #227EFF;
   line-height: 18px;
-  background-color: #fff2eb;
-  border: 1px solid #fff2eb;
+  background-color: #D1E4FF;
+  border: 1px solid #D1E4FF;
 }
 .page-item.disabled .page-link {
   color: #8a9099;
