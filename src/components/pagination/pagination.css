@@ -1,0 +1,80 @@
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-count {
+  justify-content: start;
+  color: #5c6f7f;
+}
+ul.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  font-size: 1rem;
+  margin: 2px 0;
+  white-space: nowrap;
+}
+.justify-content-start {
+  justify-content: start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.pagination .page-item {
+  padding: 4px;
+}
+.page-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem;
+  line-height: 1.25;
+  background-color: #ffffff;
+  color: #3f434a;
+  min-height: 34px;
+  min-width: 34px;
+  text-align: center;
+  border-color: transparent;
+}
+.page-link:hover {
+  border-color: transparent;
+}
+.page-item.active .page-link {
+  background-color: #ff7f36;
+  border-color: #ff7f36;
+  color: #ffffff;
+}
+.page-item:first-of-type .page-link {
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+.page-item:last-child .page-link {
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+.page-item:first-of-type .page-link,
+.page-item:nth-of-type(2) .page-link,
+.page-item:last-of-type .page-link,
+.page-item:nth-last-of-type(2) .page-link {
+  font-size: 22px;
+  color: #ff7f36;
+  line-height: 18px;
+  background-color: #fff2eb;
+  border: 1px solid #fff2eb;
+}
+.page-item.disabled .page-link {
+  color: #8a9099;
+  background-color: #f8f8f8;
+  border-color: #f2f1f1;
+}
+.page-link:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: none;
+}

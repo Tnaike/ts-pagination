@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './pagination.css'
+
 type Position = 'start' | 'center' | 'end';
 
 interface PaginationProps {
