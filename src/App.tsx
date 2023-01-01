@@ -25,7 +25,8 @@ function App() {
           currentPage={currentPage}
           totalPages={20}
           onPageChange={handlePageChange}
-          align='start'
+          doubleArrows
+          align='end'
         />
       </div>
     </div>

@@ -22,7 +22,7 @@ const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   onPageChange,
   className = '',
-  doubleArrows = true,
+  doubleArrows = false,
   firstButton = <>&laquo;</>,
   previousButton = <>&lsaquo;</>,
   nextButton = <>&rsaquo;</>,
@@ -73,7 +73,7 @@ const Pagination: React.FC<PaginationProps> = ({
       </div>
       <ul className={`pagination ${className} justify-content-${align}`}>
         {doubleArrows && (
-          <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+          <li className={`page-item arrows ${currentPage === 1 ? 'disabled' : ''}`}>
             <button
               type='button'
               className='page-link'
@@ -83,7 +83,7 @@ const Pagination: React.FC<PaginationProps> = ({
             </button>
           </li>
         )}
-        <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+        <li className={`page-item arrows ${currentPage === 1 ? 'disabled' : ''}`}>
           <button
             type='button'
             className='page-link'
@@ -109,7 +109,7 @@ const Pagination: React.FC<PaginationProps> = ({
           </li>
         ))}
         <li
-          className={`page-item ${
+          className={`page-item arrows ${
             currentPage === totalPages ? 'disabled' : ''
           }`}
         >
@@ -124,7 +124,7 @@ const Pagination: React.FC<PaginationProps> = ({
         </li>
         {doubleArrows && (
           <li
-            className={`page-item ${
+            className={`page-item arrows ${
               currentPage === totalPages ? 'disabled' : ''
             }`}
           >

@@ -67,17 +67,17 @@ ul.pagination {
   border-top-right-radius: 8px !important;
   border-bottom-right-radius: 8px !important;
 }
-.page-item:first-of-type .page-link,
-.page-item:nth-of-type(2) .page-link,
-.page-item:last-of-type .page-link,
-.page-item:nth-last-of-type(2) .page-link {
+.page-item.arrows:first-of-type .page-link,
+.page-item.arrows:nth-of-type(2) .page-link,
+.page-item.arrows:last-of-type .page-link,
+.page-item.arrows:nth-last-of-type(2) .page-link {
   font-size: 22px;
   color: #227eff;
   line-height: 18px;
   background-color: #e9f2ff;
   border: 1px solid #e9f2ff;
 }
-.page-item.disabled .page-link {
+.page-item.arrows.disabled .page-link {
   color: #8a9099;
   background-color: #f8f8f8;
   border-color: #f2f1f1;
