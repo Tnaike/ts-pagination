@@ -27,6 +27,7 @@ function App() {
           onPageChange={handlePageChange}
           doubleArrows
           align='end'
+          dots
         />
       </div>
     </div>

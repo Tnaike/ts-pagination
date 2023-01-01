@@ -15,6 +15,7 @@ interface PaginationProps {
   nextButton?: React.ReactElement;
   lastButton?: React.ReactElement;
   align?: Position;
+  dots?: boolean;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -28,6 +29,7 @@ const Pagination: React.FC<PaginationProps> = ({
   nextButton = <>&rsaquo;</>,
   lastButton = <>&raquo;</>,
   align = 'start',
+  dots = false,
 }) => {
   const pages: number[] = [];
 
@@ -73,7 +75,11 @@ const Pagination: React.FC<PaginationProps> = ({
       </div>
       <ul className={`pagination ${className} justify-content-${align}`}>
         {doubleArrows && (
-          <li className={`page-item arrows ${currentPage === 1 ? 'disabled' : ''}`}>
+          <li
+            className={`page-item arrows ${
+              currentPage === 1 ? 'disabled' : ''
+            }`}
+          >
             <button
               type='button'
               className='page-link'
@@ -83,7 +89,9 @@ const Pagination: React.FC<PaginationProps> = ({
             </button>
           </li>
         )}
-        <li className={`page-item arrows ${currentPage === 1 ? 'disabled' : ''}`}>
+        <li
+          className={`page-item arrows ${currentPage === 1 ? 'disabled' : ''}`}
+        >
           <button
             type='button'
             className='page-link'
@@ -93,6 +101,7 @@ const Pagination: React.FC<PaginationProps> = ({
             {previousButton}
           </button>
         </li>
+        {dots && startPage > 1 && <li className='page-item'>...</li>}
         {pages.map((page) => (
           <li
             key={page}
@@ -108,6 +117,7 @@ const Pagination: React.FC<PaginationProps> = ({
             </button>
           </li>
         ))}
+        {dots && endPage < totalPages && <li className='page-item'>...</li>}
         <li
           className={`page-item arrows ${
             currentPage === totalPages ? 'disabled' : ''
