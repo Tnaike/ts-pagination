@@ -28,6 +28,7 @@ function App() {
           doubleArrows
           align='end'
           dots
+          pageCount
         />
       </div>
     </div>
