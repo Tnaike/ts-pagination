@@ -24,13 +24,13 @@ const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   onPageChange,
   className = '',
-  doubleArrows = false,
+  doubleArrows = true,
   firstButton = <>&laquo;</>,
   previousButton = <>&lsaquo;</>,
   nextButton = <>&rsaquo;</>,
   lastButton = <>&raquo;</>,
   align = 'start',
-  dots = false,
+  dots = true,
   pageCount = false,
 }) => {
   const pages: number[] = [];
@@ -63,8 +63,8 @@ const Pagination: React.FC<PaginationProps> = ({
     }
   };
 
-  const startPage = Math.max(1, currentPage - 3);
-  const endPage = Math.min(totalPages, currentPage + 3);
+  const startPage = Math.max(1, currentPage - 2);
+  const endPage = Math.min(totalPages, currentPage + 2);
 
   for (let i: number = startPage; i <= endPage; i++) {
     pages.push(i);

@@ -25,9 +25,7 @@ function App() {
           currentPage={currentPage}
           totalPages={20}
           onPageChange={handlePageChange}
-          doubleArrows
           align='end'
-          dots
           pageCount
         />
       </div>
