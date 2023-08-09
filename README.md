@@ -1,6 +1,6 @@
 # ts-pagination
 
-## Simple reusable pagination for TypeScript React
+## Simple reusable pagination with TypeScript React
 
 In the project directory, you can run:
 
